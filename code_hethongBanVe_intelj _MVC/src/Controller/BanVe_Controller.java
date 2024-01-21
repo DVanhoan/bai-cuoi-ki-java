@@ -120,14 +120,12 @@ public class BanVe_Controller implements ActionListener, MouseListener {
             maLoTrinh = banVeView.tableModel1.getValueAt(vitri, 0).toString();
             soLuong = (int) banVeView.tableModel1.getValueAt(vitri, 2);
             ngayKhoiHanh = banVeView.tableModel1.getValueAt(vitri, 3).toString();
-            System.out.println(ngayKhoiHanh);
 
             so = 1;
         }
 
 
         if (e.getSource()==banVeView.btn_tinhTien){
-
             //Khi nhấn nút tính tiền mà vẫn chưa nhập dữ liệu thì sẽ báo cho người dùng
             //ở đây nếu chưa click vào bảng có nghĩa là giá trị số vẫn bằng 0 nên sẽ báo lỗi
             if (so==0 || banVeView.txt_sove.getText().isEmpty() || banVeView.txt_giaTien.getText().isEmpty()){
@@ -145,7 +143,7 @@ public class BanVe_Controller implements ActionListener, MouseListener {
         }
 
 
-        //Nếu người dùng
+        //Xử lí khi nhấn nút mua
         if (e.getSource()==banVeView.btn_mua){
             //Kiểm tra đã nhập thông tin chưa
             if (banVeView.txt_MaDat.getText().isEmpty()||

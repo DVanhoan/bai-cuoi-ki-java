@@ -14,7 +14,8 @@ public class Dao_BanVe {
         public VeXe_model insert(VeXe_model veXeModel){
             try {
                 con = JDBCUTill.getConnection();
-                String sql = "insert into danhsachve(MaDat, MaLoTrinh, HoVaTen, SoDienThoai, SoVe, TongTien, NgayDat, NgayKhoiHanh, ThanhToan) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                String sql = "insert into danhsachve(MaDat, MaLoTrinh, HoVaTen, SoDienThoai, SoVe, TongTien, NgayDat, NgayKhoiHanh, ThanhToan)" +
+                             " values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 PreparedStatement stmt = con.prepareStatement(sql);
                 stmt.setString(1, veXeModel.getMaDat());
                 stmt.setString(2, veXeModel.getMaLoTrinh());
