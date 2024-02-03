@@ -3,7 +3,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class JDBCUTill {
+public class JDBCUTill  {
         public static Connection getConnection() throws SQLException {
             Connection c = null;
 

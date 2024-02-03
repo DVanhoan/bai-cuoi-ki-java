@@ -21,7 +21,7 @@ public class VeXe_Controller implements ActionListener , MouseListener {
         try {
             Connection con = JDBCUTill.getConnection();
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from danhsachve");
+            ResultSet rs = stmt.executeQuery("select distinct * from danhsachve");
             veXeView.tableModel.setRowCount(0);
             while (rs.next()){
                 Object[] rowdata = new Object[9];
